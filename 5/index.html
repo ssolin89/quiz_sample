@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>크리스마스 퀴즈</title>
+	<link rel="stylesheet" href="../common/css/common.css">
+	<link rel="stylesheet" href="ox.css">
+	<style>
+		/* 현재 페이지 On CSS */
+		p#page5 {
+			background-color: #FFAB27;
+			color: #fff;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- #################### OX container #################### -->
+	<div id="EX_all_wrap">
+		<div id="ox_wrap" class="ox_wrap">
+			<!-- 문제 제목 Header -->
+			<div class="header">
+				<div class="title_area">
+					<p class="tit_bg">
+						<img src="../common/imgs/title.png" alt="타이틀영역 이미지"/>
+					</p>
+					<p class="tit_cha">
+						<img src="../common/imgs/cha0.png" alit="타이틀 캐릭터 이미지"/>
+					</p>
+					<h1>크리스마스에 대한 설명으로 맞으면 <span class="h1_o"><img src="imgs/o_4.png" alt="O 이미지" /></span>,
+						&nbsp;틀리면 <span class="h1_x"><img src="imgs/x_1.png" alt="x이미지" /></span> 를 눌러 보세요.</h1>
+				</div>
+			</div>
+
+			<!-- 문제 영역 Container -->
+			<div class="container">
+				<div class="board"><img src="../common/imgs/board.png" alt="보드판 이미지" /></div>
+				<div class="ox_exImg">
+					<div class="d0">
+						<span class="imgs0"><img src="imgs/p0.png" alt="문제 이미지 0" /></span>
+						<p class="text0">크리스마스 이브는 크리스마스 다음날이다.</p>
+					</div>
+					<div class="d1">
+						<span class="imgs1"><img class="p1" src="imgs/p0.png" alt="문제 이미지 1" /></span>
+						<p class="text1">크리스마스를 1월에 보내는 나라가 있다.</p>
+					</div>
+					<div class="d2">
+						<span class="imgs2"><img class="p2" src="imgs/p0.png" alt="문제 이미지 2" /></span>
+						<p class="text2">우리나라는 1990년대부터 크리스마스를 공휴일로 지정했다.</p>
+					</div>
+				</div>
+
+				<div class="ox_checkArea">
+					<input type="checkbox" name="chkBox2" id="ox_chk1" onclick="chk_line2(this);"><label for="ox_chk1"></label>
+					<input type="checkbox" name="chkBox2" id="ox_chk2" onclick="chk_line2(this);"><label for="ox_chk2"></label>
+					<input type="checkbox" name="chkBox3" id="ox_chk3" onclick="chk_line3(this);"><label for="ox_chk3"></label>
+					<input type="checkbox" name="chkBox3" id="ox_chk4" onclick="chk_line3(this);"><label for="ox_chk4"></label>
+					<input type="checkbox" name="chkBox4" id="ox_chk5" onclick="chk_line4(this);"><label for="ox_chk5"></label>
+					<input type="checkbox" name="chkBox4" id="ox_chk6" onclick="chk_line4(this);"><label for="ox_chk6"></label>
+				</div>
+			</div>
+
+			<!-- 다음 페이지 이동 -->
+			<div class="btn_right" onclick="goNext();">
+				<img class="img_next" src="../common/imgs/next_btn.png" alt="우측 화살표" />
+			</div>
+		</div>
+
+		<!-- 해설 팝업 영역  -->
+		<div id="popupArea" style="display:none;">
+			<div class="popupImg">
+				<div class="popCloseBtn">
+					<img src="../common/imgs/x.png" alt="팝업닫기 버튼" />
+				</div>
+				<p class="popTextArea">
+					1.크리스마스 이브는 크리스마스 전날이다.<br/>
+					2.대부분의 국가는 25일이지만 러시아,그리스,세르비아등 일부 국가에서는 크리스마스를 1월 7일에 지낸다.<br/>
+					3.1949년 '기독탄생일'이란 명칭으로 법정 공휴일로 지정되었다.
+				</p>
+			</div>
+		</div>
+
+		<!-- #################### 팝업 & 페이지 btn 영역 // Footer #################### -->
+		<div id="footer">
+			<!-- 팝업버튼 영역 -->
+			<div class="popBtn">
+				<p class="pop_btn_Img">
+					<img src="../common/imgs/popBtn.png" alt="팝업버튼 이미지" />
+				</p>
+			</div>
+
+			<!-- 페이지 버튼 영역 -->
+			<div id="pageArea">
+				<div id="offArea">
+					<p id="page1" onclick="goPage('../1/index.html');">1</p>
+					<p id="page2" onclick="goPage('../2/index.html');">2</p>
+					<p id="page3" onclick="goPage('../3/index.html');">3</p>
+					<p id="page4" onclick="goPage('../4/index.html');">4</p>
+					<p id="page5" onclick="goPage('../5/index.html');">5</p>
+					<p id="page6" onclick="goPage('../6/index.html');">6</p>
+					<!-- <p id="page7" onclick="goPage('../7/index.html');">7</p> -->
+				</div>
+			</div>
+		</div>
+
+		<!-- 정답시 캐릭터 영역 -->
+		<div id="nextDiv" style="display: none;"></div>
+		<div id="finDiv" style="display: none;"></div>
+	</div>
+
+	<!-- 오디오 음원 영역 -->
+	<audio id="a_next" src="../common/audio/next.mp3"></audio>
+	<audio id="a_correct" src="../common/audio/correct.mp3"></audio>
+	<audio id="a_incorrect" src="../common/audio/incorrect.mp3"></audio>
+	<audio id="a_finish" src="../common/audio/finish.mp3"></audio>
+
+	<!-- ################### script Area ################### -->
+	<script src="../common/js/jquery-3.5.1.js"></script>
+	<script src="../common/js/common.js"></script>
+	<script src="ox.js"></script>
+
+	<!-- 완강시 스크립트 활성 -->
+	<!-- <script src="http://file.total-system.co.kr/js/completedClass_bt.js"></script>  -->
+
+	<!-- 페이지 이동 스크립트 -->
+	<script type="text/javascript">
+		right_url = "../6/index.html";
+	</script>
+
+</body>
+
+</html>

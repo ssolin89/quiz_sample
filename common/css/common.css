@@ -1,0 +1,307 @@
+/* ############### font ############### */
+@font-face {
+  font-family: 'fontNanumGothicBoldotf';
+  src: url('../font/fontNanumGothicBoldotf.woff2');
+}
+
+/* ############### reset ############### */
+/* pc에서만 초기화 */
+* {margin:0; padding:0;}
+footer{margin:0; padding:0;}
+
+
+body {
+  background: #d4df5a;
+}
+
+/* ############### EX_all_wrap Area ############### */
+#EX_all_wrap {
+  width:1280px;
+  height:800px;
+  position:relative;
+  left:50%;
+  top:0;
+  transform:translateX(-50%);
+}
+
+/* ############### header Area ############### */
+.header {
+  width: 1087px;
+  height: 79px;
+  position: absolute;
+  left: 72px;
+  top: 28px;
+}
+
+.title_area {
+  width: 1087px;
+  height: 79px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.tit_bg{
+  width:1087px;
+  height:79px;
+}
+.tit_bg img{
+  width:100%;
+  height:100%;
+}
+.tit_cha{
+  width:57px;
+  height:63px;
+  position:absolute;
+  left:28px;
+  top:8px;
+}
+.tit_cha img{
+  width:100%;
+  height:100%;
+}
+
+h1 {
+  width: 966px;
+  line-height:79px;
+  position: absolute;
+  left: 94px;
+  top: 0px;
+  font-family: 'fontNanumGothicBoldotf';
+  font-size: 26px;
+  color: #482F1B;
+  letter-spacing: -0.5px;
+}
+
+/* 닫기 버튼 */
+.btn_close {
+  position: absolute;
+  z-index: 1;
+  width: 73px;
+  height: 73px;
+  top: 24px;
+  right: 39px;
+}
+
+/* ############### container Area ############### */
+.container {
+  width: 1136px;
+  height: 585px;
+  position: absolute;
+  left: 50%;
+  top: 123px;
+  transform: translate(-50%);
+}
+
+.board {
+  width: 1136px;
+  height: 585px;
+}
+
+.board img {
+  width: 100%;
+  height: 100%;
+}
+
+/* ############### input Area ###############  */
+input {
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'fontNanumGothicBoldotf';
+  background-color: transparent;
+  color: #d01027;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* ############### footer Area ############### */
+#footer {
+  width: 1280px;
+  height: 92px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%);
+}
+
+/* ############### popBtn Area ############### */
+.popBtn {
+  width: 146px;
+  height: 63px;
+  position: absolute;
+  left:74px;
+  bottom:14px;
+  cursor:pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.pop_btn_Img {
+  width: 146px;
+  height: 63px;
+}
+
+.pop_btn_Img img {
+  width: 100%;
+  height: 100%;
+}
+
+/* ############### page Area ############### */
+#pageArea {
+  width: 378px;
+  height: 48px;
+  position: absolute;
+  right: 66px;
+  bottom: 22px;
+}
+
+#offArea {
+  width: 378px;
+  height: 48px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#offArea p {
+  width: 46px;
+  height: 38px;
+  /*ori-size:48px*/
+  font-size: 29px;
+  padding-top: 10px;
+  color: #9F9F9F;
+  font-family: 'fontNanumGothicBoldotf';
+  text-align: center;
+  background-color: #fff;
+  border-radius: 50px;
+  margin-right: 8px;
+  box-shadow: 0px 2px 5px 0px #7c7c7c;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  -khtml-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+
+#offArea p span {
+  display: block;
+  font-size: 30px;
+  color: #9F9F9F;
+  padding-top: 9px;
+  font-family: 'fontNanumGothicBoldotf';
+}
+
+
+/* ############### Next Page btn Area ############### */
+.btn_right {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  width: 40px;
+  height: 74px;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.btn_right img {
+  width: 100%;
+}
+
+.btn_finish {
+  display: none;
+  z-index: 1;
+  position: absolute;
+  width: 173px;
+  height: 142px;
+  top: 705px;
+  left: 1082px;
+}
+
+.btn_finish img {
+  width: 100%;
+}
+
+/* ############## popup Area ############## */
+#popupArea {
+  width: 100%;
+  height: 800px;
+  background-color: rgb(0, 0, 0, 0.5);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+#popupArea .popupImg {
+  width: 690px;
+  height: 405px;
+  background-color: #ffd76a;
+  border-radius: 20px;
+  position: absolute;
+}
+
+#popupArea .popTextArea {
+  width: 630px; /*ori-width : 670px*/
+  height: 296px; /*ori-height : 336px*/
+  padding:20px;
+  background-color: #fff;
+  border-radius: 0 0 20px 20px;
+  margin: 60px auto 0;
+  display:flex;
+  justify-content: center;
+  font-size: 28px;
+  align-items: center;
+  text-align: center;
+  font-family: 'fontNanumGothicBoldotf';
+}
+
+
+#popupArea .popCloseBtn {
+  width: 30px;
+  height: 34px;
+  position: absolute;
+  right: 18px;
+  top: 16px;
+  cursor:pointer;
+}
+
+#popupArea .popCloseBtn img {
+  width: 100%;
+  height: 100%;
+}
+
+/* ############### 정답일때 캐릭터 효과 star ############### */
+#nextDiv {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1280px;
+  height: 800px;
+  background-color: rgba(0, 0, 0, 0.3);
+  transform: translate(-50%, -50%);
+}
+
+#finDiv {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1280px;
+  height: 800px;
+  background: rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}

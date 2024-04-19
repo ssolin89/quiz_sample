@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../common/css/common.css">
+	<link rel="stylesheet" href="checkImg.css">
+	<title>크리스마스 퀴즈</title>
+	<style>
+		/* 현재 페이지 On CSS */
+		p#page6 {
+			background-color: #FFAB27;
+			color: #fff;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- #################### 체크 container #################### -->
+	<div id="EX_all_wrap">
+		<div id="check_wrap">
+			<!-- 문제 제목 Header -->
+			<div class="header">
+				<div class="title_area">
+					<p class="tit_bg">
+						<img src="../common/imgs/title.png" alt="타이틀영역 이미지"/>
+					</p>
+					<p class="tit_cha">
+						<img src="../common/imgs/cha0.png" alit="타이틀 캐릭터 이미지"/>
+					</p>
+					<h1>크리스마스 트리 맨 위에 있는 장식은?</h1>
+				</div>
+			</div>
+
+			<!-- 문제 영역 Container -->
+			<div class="container">
+				<div class="board"><img src="../common/imgs/board.png" alt="보드판 이미지"/></div>
+
+				<!-- imgChk, inputChk에서 1을 정답에 맞게 수정 해야 됨 -->
+				<div class="imgWrap">
+					<div class="img01">
+					  <img src="imgs/p1.png" alt="왼쪽 이미지" id="img01">
+					</div>
+					<div class="img02">
+					  <img src="imgs/p2.png" alt="중간 이미지" id="img02">
+					</div>
+					<div class="img03">
+					  <img src="imgs/p3.png" alt="오른쪽 이미지" id="img03">
+					</div>
+				  </div>
+				  <!-- input Area -->
+				  <div class="inputArea">
+					<input type="checkbox" id="chk1" class="chkBox" name="chkBox" onclick="chk_line(this);inputChk(1,0)"><label for="chk1"></label>
+					<input type="checkbox" id="chk2" class="chkBox" name="chkBox" onclick="chk_line(this);inputChk(2,1)"><label for="chk2"></label>
+					<input type="checkbox" id="chk3" class="chkBox" name="chkBox" onclick="chk_line(this);inputChk(3,0)"><label for="chk3"></label>
+				  </div>
+
+				  <div class="noTouch"></div>
+			</div>
+
+			<!-- 다음 페이지 이동 -->
+			<div class="btn_right" onclick="goNext();">
+				<img class="img_next" src="../common/imgs/next_btn.png" alt="우측 화살표"/>
+			</div>
+		</div>
+
+		<!-- 해설 팝업 영역  -->
+		<div id="popupArea" style="display:none;">
+			<div class="popupImg">
+				<div class="popCloseBtn">
+					<img src="../common/imgs/x.png" alt="팝업닫기 버튼"/>
+				</div>
+				<p class="popTextArea">크리스마스는 아기예수의 탄생을 기념하는 날로,<br/> 3인의 동방박사가 베들레헴에<br/> 가는 여정은 별을 보고 따라감</p>
+			</div>
+		</div>
+
+		<!-- #################### 팝업 & 페이지 btn 영역 Footer #################### -->
+		<div id="footer">
+			<!-- 팝업버튼 영역 -->
+			<div class="popBtn">
+				<p class="pop_btn_Img"><img src="../common/imgs/popBtn.png" alt="팝업버튼 이미지"/></p>
+			</div>
+
+			<!-- 페이지 버튼 영역 -->
+			<div id="pageArea">
+				<div id="offArea">
+					<p id="page1" onclick="goPage('../1/index.html');">1</p>
+					<p id="page2" onclick="goPage('../2/index.html');">2</p>
+					<p id="page3" onclick="goPage('../3/index.html');">3</p>
+					<p id="page4" onclick="goPage('../4/index.html');">4</p>
+					<p id="page5" onclick="goPage('../5/index.html');">5</p>
+					<p id="page6" onclick="goPage('../6/index.html');">6</p>
+					<!-- <p id="page7" onclick="goPage('../7/index.html');">7</p> -->
+				</div>
+			</div>
+		</div>
+		<!-- 정답시 캐릭터 영역 -->
+		<div id="nextDiv" style="display:none;"></div>
+		<div id="finDiv" style="display:none;"></div>
+	</div>
+
+	<!-- 오디오 음원 영역 -->
+	<audio id="a_correct" src="../common/audio/correct.mp3"></audio>
+	<audio id="a_incorrect" src="../common/audio/incorrect.mp3"></audio>
+	<audio id="a_next" src="../common/audio/next.mp3"></audio>
+	<audio id="a_finish" src="../common/audio/finish.mp3"></audio>
+
+	<!-- ################### script Area ################### -->
+	<script src="../common/js/jquery-3.5.1.js"></script>
+	<script src="../common/js/common.js"></script>
+	<script src="checkImg.js"></script>
+
+	<!-- 완강시 스크립트 활성 -->
+	<!-- <script src="http://file.total-system.co.kr/js/completedClass_bt.js"></script>  -->
+
+	<!-- 페이지 이동 스크립트 -->
+	<script type="text/javascript">
+		// right_url = "../2/index.html";
+	</script>
+
+</body>
+
+</html>

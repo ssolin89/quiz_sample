@@ -1,0 +1,121 @@
+/* ############### Check 유형 CSS ############### */
+/* check_wrap Area */
+#check_wrap{
+  width:1280px;
+  height:800px;
+  overflow:hidden;
+  position:absolute;
+  left:50%;
+  transform:translate(-50%);
+}
+
+/* 문제보기 이미지 */
+.imgWrap{
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 60px 60px 0px 60px;
+  box-sizing: border-box;
+}
+.img01{
+  width: 305px;
+  height: 396px;
+}
+.img01>img{
+  width: 100%;
+}
+.img02{
+  width: 305px;
+  height: 396px;
+}
+.img02>img{
+  width: 100%;
+}
+.img03{
+  width: 305px;
+  height: 396px;
+}
+.img03>img{
+  width: 100%;
+}
+
+/* ############## Input Area ############## */
+/* input 체크 영역*/
+.inputArea{
+  display:flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width:100%;
+  padding: 0 170px;
+  box-sizing: border-box;
+}
+
+/* check area chk1 */
+input[id="chk1"] {
+  display: none;
+}
+input[id="chk1"]+label {
+  display:inline-block;
+  width:78px;
+  height:78px;
+  margin-bottom:38px;
+  background:url(imgs/ans1.svg) no-repeat;
+}
+input[id="chk1"]:checked+label {
+  width: 78px;
+  height: 78px;
+  margin-bottom:38px;
+  background:url(imgs/ans2.svg) no-repeat;
+}
+
+/* check area chk2 */
+input[id="chk2"] {
+  display:none;
+}
+input[id="chk2"]+label {
+  display: inline-block;
+  width:78px;
+  height:78px;
+  margin-bottom:38px;
+  background: url(imgs/ans1.svg) no-repeat;
+}
+input[id="chk2"]:checked+label {
+  width:78px;
+  height:78px;
+  margin-bottom:38px;
+  background:url(imgs/ans2.svg) no-repeat;
+}
+
+/* check area chk3 */
+input[id="chk3"] {
+  display:none;
+}
+input[id="chk3"]+label {
+  display: inline-block;
+  width:78px;
+  height:78px;
+  margin-bottom:38px;
+  background: url(imgs/ans1.svg) no-repeat;
+}
+input[id="chk3"]:checked+label {
+  width:78px;
+  height:78px;
+  margin-bottom:38px;
+  background:url(imgs/ans2.svg) no-repeat;
+}
+
+/* 정답 시 빈 투명 div 생성해서 터치 막기 */
+.noTouch{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1136px;
+  height: 585px;
+  background: transparent;
+}

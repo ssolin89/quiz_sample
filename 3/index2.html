@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>독서퀴즈 단일입력</title>
+  <link rel="stylesheet" href="../common/css/common.css">
+  <link rel="stylesheet" href="input_single.css">
+  <style>
+    /* 현재 페이지 On CSS */
+    p#page3 {
+      background-color: #FFAB27;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- #################### 단일입력 container #################### -->
+  <div id="EX_all_wrap">
+    <div id="input_single_Wrap">
+      <!-- 문제 제목 header -->
+      <div class="header">
+        <div class="title_area">
+          <p class="tit_bg">
+						<img src="../common/imgs/title.png" alt="타이틀영역 이미지"/>
+					</p>
+					<p class="tit_cha">
+						<img src="../common/imgs/cha0.png" alit="타이틀 캐릭터 이미지"/>
+					</p>
+          <h1>빈칸에 알맞은 말을 써 보세요.</h1>
+        </div>
+      </div>
+
+      <!-- 문제 영역 Container -->
+      <div class="container">
+        <div class="board">
+          <img src="../common/imgs/board.png" alt="보드판_이미지" />
+        </div>
+        <div class="input_single_quImg">
+          <img class="p0" src="imgs/p0.png" alt="문제_이미지_영역" />
+        </div>
+        <div class="input_single_ansImg">
+          <div class="ex_bg">
+            <img class="p1" src="imgs/p1.png" alt="문제_입력_영역" />
+          </div>
+          <div class="exText">
+            <!-- textArea 0 -->
+            <p class="text0"><span>0_예문을_넣어주세요</span></p>
+            <!-- blankArea -->
+            <div class="blankWrap">
+              <span>쨔스빠스</span>
+              <div class="blank"></div>
+              <span>까쓰또쓰</span>
+            </div>
+            <!-- textArea 1 -->
+            <p class="text1"><span>1_예문을_넣어주세요</span></p>
+          </div>
+        </div>
+        <div class="inputWrap">
+          <input type="text" id="chkinput" maxlength="10" style="ime-mode:active;">
+        </div>
+      </div>
+
+      <!-- 다음 페이지 버튼 이동 -->
+      <div class="btn_right" onclick="goNext();">
+        <img class="img_next" src="../common/imgs/next_btn.png" alt="우측 화살표">
+      </div>
+    </div>
+
+    <!-- 해설 팝업 영역  -->
+    <div id="popupArea" style="display:none;">
+			<div class="popupImg">
+				<div class="popCloseBtn">
+					<img src="../common/imgs/x.png" alt="팝업닫기 버튼" />
+				</div>
+				<p class="popTextArea">해설을_넣어주세요</p>
+			</div>
+		</div>
+
+    <!-- #################### 팝업 & 페이지 Btn 영역 // Footer #################### -->
+    <div id="footer">
+      <!-- 팝업버튼 영역 -->
+      <div class="popBtn">
+        <p class="pop_btn_Img">
+          <img src="../common/imgs/popBtn.png" alt="팝업버튼_이미지" />
+        </p>
+      </div>
+
+      <!-- 페이지 버튼 영역 -->
+      <div id="pageArea">
+        <div id="offArea">
+          <p id="page1" onclick="goPage('../1/index.html');">1</p>
+          <p id="page2" onclick="goPage('../2/index.html');">2</p>
+          <p id="page3" onclick="goPage('../3/index.html');">3</p>
+          <p id="page4" onclick="goPage('../4/index.html');">4</p>
+          <p id="page5" onclick="goPage('../5/index.html');">5</p>
+          <p id="page6" onclick="goPage('../6/index.html');">6</p>
+          <p id="page7" onclick="goPage('../7/index.html');">7</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- 정답시 캐릭터 영역 -->
+    <div id="nextDiv" style="display:none;"></div>
+    <div id="finDiv" style="display:none;"></div>
+  </div>
+
+  <!-- 오디오 음원 영역 -->
+  <audio id="a_next" src="../common/audio/next.mp3"></audio>
+  <audio id="a_correct" src="../common/audio/correct.mp3"></audio>
+  <audio id="a_incorrect" src="../common/audio/incorrect.mp3"></audio>
+  <audio id="a_finish" src="../common/audio/finish.mp3"></audio>
+
+  <!-- ################### script Area ################### -->
+  <script src="../common/js/jquery-3.5.1.js"></script>
+  <script src="../common/js/common.js"></script>
+  <script src="input_single.js"></script>
+
+  <!-- 완강시 스크립트 활성 -->
+  <!-- <script src="http://file.total-system.co.kr/js/completedClass_bt.js"></script>  -->
+
+  <!-- 페이지 이동 스크립트 -->
+  <script type="text/javascript">
+    right_url = "../4/index.html";
+  </script>
+
+</body>
+
+</html>

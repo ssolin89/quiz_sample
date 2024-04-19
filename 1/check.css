@@ -1,0 +1,115 @@
+/* ############### Check 유형 CSS ############### */
+/* check_wrap Area */
+#check_wrap{
+  width:1280px;
+  height:800px;
+  overflow:hidden;
+  position:absolute;
+  left:50%;
+  transform:translate(-50%);
+}
+/* 문제보기 이미지 */
+.chk_quImg{
+  width:649px;
+  height:528px;
+  position:absolute;
+  left:32px;
+  top:23px;
+}
+.chk_quImg img{
+  width:100%;
+  height:100%;
+}
+/* 문제보기 영역 */
+.chk_exImg{
+  width:278px;
+  height:356px;
+  position:absolute;
+  left:690px;
+  top:118px;
+  display:flex;
+  flex-wrap:wrap;
+  align-content:space-around;
+}
+.chk_exImg img{
+  width:100%;
+  height:100%;
+}
+.chk_exImg div{
+  width:274px; /* ori box_size : 278px -4px border값 */
+  height:94px; /* ori box_size : 98px -4px border값 */
+  background-color:#CDDDE3;
+  border-radius:15px;
+  border:2px solid #BECCD1;
+  font-size:24px;
+  text-align:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.chk_exImg div p{
+  color:#554443;
+  font-family: 'fontNanumGothicBoldotf';
+}
+
+/* ############## Input Area ############## */
+/* input 체크 영역*/
+#check_wrap .inputArea{
+  width:78px;
+  height:356px;
+  position:absolute;
+  right:64px;
+  top:118px;
+  display:flex;
+  flex-wrap:wrap;
+  align-content:space-around;
+}
+
+/* check area chk1 */
+#check_wrap input[id="chk1"] {
+  display: none;
+}
+#check_wrap input[id="chk1"]+label {
+  display: inline-block;
+  width:78px;
+  height:78px;
+  background:url(imgs/ans1.svg) no-repeat;
+}
+#check_wrap input[id="chk1"]:checked+label {
+  width: 78px;
+  height: 78px;
+  background:url(imgs/ans2.svg) no-repeat;
+}
+
+/* check area chk2 */
+#check_wrap input[id="chk2"] {
+  display: none;
+}
+#check_wrap input[id="chk2"]+label {
+  display: inline-block;
+  width:78px;
+  height:78px;
+  background: url(imgs/ans1.svg) no-repeat;
+}
+#check_wrap input[id="chk2"]:checked+label {
+  width:78px;
+  height:78px;
+  background:url(imgs/ans2.svg) no-repeat;
+}
+
+/* check area chk3 */
+#check_wrap input[id="chk3"] {
+  display: none;
+}
+#check_wrap input[id="chk3"]+label {
+  display: inline-block;
+  width:78px;
+  height:78px;
+  background: url(imgs/ans1.svg) no-repeat;
+}
+#check_wrap input[id="chk3"]:checked+label {
+  width: 78px;
+  height: 78px;
+  background:url(imgs/ans2.svg) no-repeat;
+}
+

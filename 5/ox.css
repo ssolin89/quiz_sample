@@ -1,0 +1,226 @@
+/* ############### OX퀴즈 유형 CSS ############### */
+/* ox_wrap Area */
+.ox_wrap{
+  width:1280px;
+  height:800px;
+  overflow:hidden;
+  position:absolute;
+  left:50%;
+  transform:translate(-50%);
+}
+.h1_o {
+  display: inline-block;
+  width: 43px;
+  height: 43px;
+  vertical-align: middle;
+}
+.h1_o img{
+  width:100%;
+  height:100%;
+  display:block;
+}
+.h1_x {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  vertical-align: middle;
+}
+.h1_x img{
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+/* 문제 이미지 영역 */
+.ox_exImg {
+  width:994px;
+  height:390px;
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  display:flex;
+  flex-wrap:wrap;
+  align-content:space-around;
+}
+.ox_exImg div{
+  width:994px;
+  height:124px;
+  display:flex;
+  align-items:center;
+}
+.ox_exImg div span{
+  display:inline-block;
+  width:994px;
+  height:124px;
+  position:absolute;
+}
+.exIox_exImgmg div span img{
+  width:100%;
+  height:100%;
+}
+
+.ox_exImg div p{
+  width:654px;
+  color:#554443;
+  font-size:28px;
+  font-family:'fontNanumGothicBoldotf';
+  position:absolute;
+  left:50px;
+}
+
+/* input 영역 */
+.ox_checkArea{
+  width:242px;
+  height:390px;
+  position:absolute;
+  right:92px;
+  top:50%;
+  transform: translateY(-50%);
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-content: space-around;
+}
+
+.ox_checkArea input[id="ox_chk1"] {
+  display:none;
+}
+.ox_checkArea input[id="ox_chk1"]+label {
+  display:inline-block;
+  width:108px;
+  height:95px;
+  background: url(imgs/ans1.png) no-repeat;
+}
+.ox_checkArea input[id="ox_chk1"]:checked+label {
+  width:108px;
+  height:95px;
+  background: url(imgs/ans1_sel.png) no-repeat;
+}
+
+.ox_checkArea input[id="ox_chk2"] {
+  display: none;
+}
+.ox_checkArea input[id="ox_chk2"]+label {
+  display: inline-block;
+  width:108px;
+  height:95px;
+  background: url(imgs/ans2.png) no-repeat;
+}
+.ox_checkArea input[id="ox_chk2"]:checked+label {
+  width:108px;
+  height:95px;
+  background: url(imgs/ans2_sel.png) no-repeat;
+}
+
+.ox_checkArea input[id="ox_chk3"] {
+  display:none;
+}
+.ox_checkArea input[id="ox_chk3"]+label {
+  display:inline-block;
+  width:108px;
+  height:95px;
+  background: url(imgs/ans1.png) no-repeat;
+}
+.ox_checkArea input[id="ox_chk3"]:checked+label {
+  width:108px;
+  height:95px;
+  background: url(imgs/ans1_sel.png) no-repeat;
+}
+
+.ox_checkArea input[id="ox_chk4"] {
+  display: none;
+}
+.ox_checkArea input[id="ox_chk4"]+label {
+  display: inline-block;
+  width:108px;
+  height:95px;
+  background: url(imgs/ans2.png) no-repeat;
+}
+.ox_checkArea input[id="ox_chk4"]:checked+label {
+  width:108px;
+  height:95px;
+  background: url(imgs/ans2_sel.png) no-repeat;
+}
+
+.ox_checkArea input[id="ox_chk5"] {
+  display: none;
+}
+.ox_checkArea input[id="ox_chk5"]+label {
+  display: inline-block;
+  width:108px;
+  height:95px;
+  background: url(imgs/ans1.png) no-repeat;
+}
+.ox_checkArea input[id="ox_chk5"]:checked+label {
+  width:108px;
+  height:95px;
+  background: url(imgs/ans1_sel.png) no-repeat;
+}
+
+.ox_checkArea input[id="ox_chk6"] {
+  display: none;
+}
+.ox_checkArea input[id="ox_chk6"]+label {
+  display: inline-block;
+  width: 108px;
+  height: 95px;
+  background: url(imgs/ans2.png) no-repeat;
+}
+.ox_checkArea input[id="ox_chk6"]:checked+label {
+  width: 108px;
+  height: 95px;
+  background: url(imgs/ans2_sel.png) no-repeat;
+}
+
+
+/* ############## ox_popup Area ############## */
+#ox_popupArea{
+  width:100%;
+  height:800px;
+  background-color:rgb(0,0,0,0.5);
+  position:absolute;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:5;
+}
+#ox_popupArea .popupImg{
+  width:690px;
+  height:405px;
+  background-color:#ffd76a;
+  border-radius:20px;
+  position:absolute;
+}
+#ox_popupArea .popTextArea{
+  width:670px;
+  height:336px;
+  background-color:#fff;
+  border-radius:0 0 20px 20px;
+  margin:60px auto 0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+#ox_popupArea textarea{
+  resize:none;
+  width:600px;
+  font-size:28px;
+  text-align:center;
+  border:none;
+  font-family: 'fontNanumGothicBoldotf';
+}
+#ox_popupArea textarea:focus{
+  outline:none;
+}
+#ox_popupArea .popCloseBtn{
+  width:30px;
+  height:34px;
+  position:absolute;
+  right:18px;
+  top:16px;
+}
+#ox_popupArea .popCloseBtn img{
+  width:100%;
+  height:100%;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../common/css/common.css">
+	<link rel="stylesheet" href="check.css">
+	<title>퀴즈입니다</title>
+	<style>
+		/* 현재 페이지 On CSS */
+		p#page1 {
+			background-color: #FFAB27;
+			color: #fff;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- #################### 체크 container #################### -->
+	<div id="EX_all_wrap">
+		<div id="check_wrap">
+			<!-- 문제 제목 Header -->
+			<div class="header">
+				<div class="title_area">
+					<p class="tit_bg">
+						<img src="../common/imgs/title.png" alt="타이틀영역 이미지"/>
+					</p>
+					<p class="tit_cha">
+						<img src="../common/imgs/cha0.png" alit="타이틀 캐릭터 이미지"/>
+					</p>
+					<h1>크리스마스에 쓰이는 나무를 찾아 체크하세요.</h1>
+				</div>
+			</div>
+
+			<!-- 문제 영역 Container -->
+			<div class="container">
+				<div class="board"><img src="../common/imgs/board.png" alt="보드판 이미지"/></div>
+				<div class="chk_quImg"><img class="p0" src="imgs/p0.png" alt="문제보기 이미지"/></div>
+				<div class="chk_exImg">
+					<div class="d1">
+						<p class="p1">소나무</p>
+					</div>
+					<div class="d2">
+						<p class="p2">대나무</p>
+					</div>
+					<div class="d3">
+						<p class="p3">전나무</p>
+					</div>
+				</div>
+				<!-- check input Area -->
+				<div class="inputArea">
+					<input type="checkbox" name="chkBox1" id="chk1" onclick="chk_line1(this); _chk_click(1,0);" value="1" /><label
+						for="chk1"></label>
+					<input type="checkbox" name="chkBox1" id="chk2" onclick="chk_line1(this); _chk_click(2,0);" value="2" /><label
+						for="chk2"></label>
+					<input type="checkbox" name="chkBox1" id="chk3" onclick="chk_line1(this); _chk_click(3,1);" value="3" /><label
+						for="chk3"></label>
+				</div>
+			</div>
+
+			<!-- 다음 페이지 이동 -->
+			<div class="btn_right" onclick="goNext();">
+				<img class="img_next" src="../common/imgs/next_btn.png" alt="우측 화살표"/>
+			</div>
+		</div>
+
+		<!-- 해설 팝업 영역  -->
+		<div id="popupArea" style="display:none;">
+			<div class="popupImg">
+				<div class="popCloseBtn">
+					<img src="../common/imgs/x.png" alt="팝업닫기 버튼"/>
+				</div>
+				<p class="popTextArea">크리스마스 트리로는 주로 전나무를 사용한다.</p>
+			</div>
+		</div>
+
+		<!-- #################### 팝업 & 페이지 btn 영역 Footer #################### -->
+		<div id="footer">
+			<!-- 팝업버튼 영역 -->
+			<div class="popBtn">
+				<p class="pop_btn_Img"><img src="../common/imgs/popBtn.png" alt="팝업버튼 이미지"/></p>
+			</div>
+
+			<!-- 페이지 버튼 영역 -->
+			<div id="pageArea">
+				<div id="offArea">
+					<p id="page1" onclick="goPage('../1/index.html');">1</p>
+					<p id="page2" onclick="goPage('../2/index.html');">2</p>
+					<p id="page3" onclick="goPage('../3/index.html');">3</p>
+					<p id="page4" onclick="goPage('../4/index.html');">4</p>
+					<p id="page5" onclick="goPage('../5/index.html');">5</p>
+					<p id="page6" onclick="goPage('../6/index.html');">6</p>
+					<!-- <p id="page7" onclick="goPage('../7/index.html');">7</p> -->
+				</div>
+			</div>
+		</div>
+		<!-- 정답시 캐릭터 영역 -->
+		<div id="nextDiv" style="display:none;"></div>
+		<div id="finDiv" style="display:none;"></div>
+	</div>
+
+	<!-- 오디오 음원 영역 -->
+	<audio id="a_correct" src="../common/audio/correct.mp3"></audio>
+	<audio id="a_incorrect" src="../common/audio/incorrect.mp3"></audio>
+	<audio id="a_next" src="../common/audio/next.mp3"></audio>
+	<audio id="a_finish" src="../common/audio/finish.mp3"></audio>
+
+	<!-- ################### script Area ################### -->
+	<script src="../common/js/jquery-3.5.1.js"></script>
+	<script src="../common/js/common.js"></script>
+	<script src="check.js"></script>
+
+	<!-- 완강시 스크립트 활성 -->
+	<!-- <script src="http://file.total-system.co.kr/js/completedClass_bt.js"></script>  -->
+
+	<!-- 페이지 이동 스크립트 -->
+	<script type="text/javascript">
+		right_url = "../2/index.html";
+	</script>
+
+</body>
+
+</html>

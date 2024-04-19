@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>크리스마스 퀴즈</title>
+	<link rel="stylesheet" href="../common/css/common.css">
+	<link rel="stylesheet" href="drag.css">
+	<style>
+		/* 현재 페이지 On CSS */
+		p#page4 {
+			background-color: #FFAB27;
+			color: #fff;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- #################### 드래그 container #################### -->
+	<div id="EX_all_wrap">
+		<div id="drag_wrap">
+			<!-- 문제 제목 Header -->
+			<div class="header">
+				<div class="title_area">
+					<p class="tit_bg">
+						<img src="../common/imgs/title.png" alt="타이틀영역 이미지"/>
+					</p>
+					<p class="tit_cha">
+						<img src="../common/imgs/cha0.png" alit="타이틀 캐릭터 이미지"/>
+					</p>
+					<h1>산타의 썰매를 끄는 동물을 찾아 끌어다 넣어보세요.</h1>
+				</div>
+			</div>
+
+			<!-- 문제 영역 container -->
+			<div class="container">
+				<div class="board"><img src="../common/imgs/board.png" alt="보드판 이미지"/></div>
+				<div class="drag_quImg"><img class="p0" src="imgs/p0.png" alt="문제 이미지"/></div>
+
+				<div class="drag_exImg">
+					<div class="ex_bg"><img src="imgs/p1.png" alt="문제예문 이미지"/></div>
+					<div class="exText">
+						<!-- text Area 0 -->
+						<p class="text0">
+							<span>산타의 썰매를 끄는 동물은</span>
+						</p>
+						<!-- dropArea -->
+						<div id="dropAreaWrap">
+							<div id="dropArea" name="dropArea"></div>
+						</div>
+						<!-- text Area 1 -->
+						<p class="text1">
+							<span>입니다.</span>
+						</p>
+					</div>
+				</div>
+				<!-- 보기 낱말 영역 -->
+				<div class="draImg">
+					<div class="draBg">
+						<div id="drag0" class="drag0" name="img_drag">양</div>
+						<div id="drag1" class="drag1" name="img_drag">말</div>
+						<div id="drag2" class="drag2" name="img_drag">순록</div>
+					</div>
+					<div class="draBgBlock"></div>
+				</div>
+			</div>
+
+			<!-- 다음 페이지 이동 -->
+			<div class="btn_right" onclick="goNext();">
+				<img class="img_next" src="../common/imgs/next_btn.png" alt="우측 화살표" />
+			</div>
+		</div>
+
+		<!-- 해설 팝업 영역  -->
+		<div id="popupArea" style="display:none;">
+			<div class="popupImg">
+				<div class="popCloseBtn">
+					<img src="../common/imgs/x.png" alt="팝업닫기 버튼" />
+				</div>
+				<p class="popTextArea">산타의 썰매를 끄는 뿔달린 친구는 루돌프라고 하죠.</p>
+			</div>
+		</div>
+
+		<!-- #################### 팝업 & 페이지 Btn영역 // Footer #################### -->
+		<div id="footer">
+			<!-- 팝업버튼 영역 -->
+			<div class="popBtn">
+				<p class="pop_btn_Img">
+					<img src="../common/imgs/popBtn.png" alt="팝업버튼_이미지" />
+				</p>
+			</div>
+
+			<!-- 페이지 버튼 영역 -->
+			<div id="pageArea">
+				<div id="offArea">
+					<p id="page1" onclick="goPage('../1/index.html');">1</p>
+					<p id="page2" onclick="goPage('../2/index.html');">2</p>
+					<p id="page3" onclick="goPage('../3/index.html');">3</p>
+					<p id="page4" onclick="goPage('../4/index.html');">4</p>
+					<p id="page5" onclick="goPage('../5/index.html');">5</p>
+					<p id="page6" onclick="goPage('../6/index.html');">6</p>
+					<!-- <p id="page7" onclick="goPage('../7/index.html');">7</p> -->
+				</div>
+			</div>
+		</div>
+
+		<!-- 정답시 캐릭터 영역 -->
+		<div id="nextDiv" style="display:none;"></div>
+		<div id="finDiv" style="display:none;"></div>
+	</div>
+
+	<!-- 오디오 음원 영역 -->
+	<audio id="a_correct" src="../common/audio/correct.mp3"></audio>
+	<audio id="a_incorrect" src="../common/audio/incorrect.mp3"></audio>
+	<audio id="a_next" src="../common/audio/next.mp3"></audio>
+	<audio id="a_finish" src="../common/audio/finish.mp3"></audio>
+
+	<!-- ################### script Area ################### -->
+	<script src="../common/js/jquery-3.5.1.js"></script>
+	<script src="../common/js/jquery-ui/jquery-ui.min.js"></script>
+	<script src="../common/js/jquery-ui/jquery.ui.touch-punch.min.js"></script>
+	<script src="../common/js/common.js"></script>
+	<script src="drag.js"></script>
+
+	<!-- 완강시 스크립트 활성 -->
+	<!-- <script src="http://file.total-system.co.kr/js/completedClass_bt.js"></script>  -->
+
+	<!-- 페이지 이동 스크립트 -->
+	<script type="text/javascript">
+		right_url = "../5/index.html";
+	</script>
+
+</body>
+
+</html>
